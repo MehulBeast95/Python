@@ -1,0 +1,3095 @@
+c = int(input("Enter choice- "))
+
+if c == 1:
+    s = input("Enter string of 6 characters: ")
+    x = s[-1] + s[-2] + s[-3] + s[-4] + s[-5] + s[-6]
+    if x == s:
+        print("Palindrome")
+    else:
+        print("Not a palindrome")
+elif c == 2:
+    n = int(input("Enter a number: "))
+    x = n % 2
+    if x == 0:
+        print("Even")
+    else:
+        print("Odd")
+elif c == 3:
+    p = str(input("Enter password: "))
+    if p == "MehulBisht":
+        print("Correct password")
+    else:
+        print("Incorrect Password")
+##################################################################
+
+while c == 'yes':
+        if c == 'no':
+            break
+        ch = (input("Enter Character: "))
+        if 65 <= ord(ch) <= 90:
+            print('Capital Letters')
+        elif 97 <= ord(ch) <= 122:
+            print('Small Letters')
+        elif 48 <= ord(ch) <= 57:
+            print('Digits')
+        else:
+            print('Special Character')
+        c = input('Want to Continue? ')
+        if c != 'yes' or 'no':
+            print("I don't understand that!!!")
+##############################################################
+# Check whether a number taken from the user in an Armstrong number
+
+# 123 = cube(1)+cube(2)+cube(3)
+
+
+n = int(input("Enter a number: "))
+n1=n
+s = 0
+while n > 0:
+    r = n%10     # n=153   15   1
+    s = s+r*r*r  # r=3     5    1
+    n = n//10    # n=15    1    0
+if n1==s:
+    print(n1, "is an Armstrong number")
+else:
+    print(n1, "is not an Armstrong number")
+###################################################################
+# Take a number from the user an reverse it
+
+# 123 = 321
+
+
+n = int(input("Enter a number: "))
+n1 = n
+c = 0
+while n > 0:
+    c = c+1
+    n = n//10
+f = 0
+g = c-1
+
+for i in range(0,c):
+    n = ((n1//10**i)%10)
+    f+=n*10**(g-i)
+print(f)
+##############################################################################
+# Check whether a number taken from the user is prime number or not
+
+# 17, 23, 5
+
+n = int(input("Enter a number: "))
+k=1
+
+for i in range(2,n):
+    k = n%i
+    if k == 0:
+        print(n, "is not a prime number")
+        break
+if k!=0:
+    print(n, "is a Prime number")
+######################################################################
+# Read a number from user and check whether it is a palindrome or not
+
+n = int(input("Enter a number: "))
+n1 = n
+s = 0
+
+while n > 0:         # 121   12     1
+    k = n % 10       # 1      2     1
+    s = s * 10 + k   # 1      12   121
+    n = n // 10      # 12     1    0
+if n1 == s:
+    print(n1, "-It is a palindrome")
+else:
+    print(n1, "-It is not a palindrome")
+###########################################################
+for i in "MEGHALAYA":
+    if i == "L":
+        continue
+    else:
+        print(i)
+###################################################
+# Else with a for loop
+
+for i in range(10):
+    if i >= 6:
+        break
+    else:
+        print(i)
+else:
+    print("Out of loop")
+#######################################################
+# Else with a for loop
+
+n = int(input("Enter a number to check: "))
+
+for i in range(2, n):
+    if n % i == 0:
+        print(n, "Not a Prime number")
+        break
+else:
+    print(n, "is a Prime number")
+###############################################
+
+
+for i in range(5):
+    for j in range(i+1):
+        print("*", end= " ")
+    print()
+######################################
+
+
+for i in range(4):
+    for j in range(1, i+2):  # 1 to 1, 1 to 2, 1 to 3, 1 to 4
+        print(j, end=" ")
+    print()
+############################################
+
+
+for i in range(5,0,-1):
+    for j in range(5, i-1, -1):
+        print(j, end=" ")
+    print()
+#######################################################################################
+
+# ID = sgs password = sgs123
+# Wapp to ask a user to enter user id and password give him three chance
+# If user id and password ok, display valid user otherwise display invalid user
+
+
+for i in range (1,4):
+    a = input("Enter ID: ")
+    b = input("Enter Password: ")
+
+    if a == "sgs":
+        if b == "sgs123":
+            print("Valid user")
+            break
+        else:
+            print("Invalid user")
+    else:
+        print("Invalid User")
+###################################################################
+
+# WAPP to generate the sequence -5, -10, -15, -20, -25 upto n where n is taken from the user
+
+n = int(input("Enter number: "))
+
+i = -5
+for i in range(-5, n - 1, -5):
+    print(i)
+############################################################
+# WAPP to generate the sequence -5, -10, -15, -20, -25 upto n where n is taken from the user
+n = int(input("Enter number: "))
+i = -5
+while (i>=n):
+    print(i)
+    i=i-5
+############################################################
+# WAPP to generate the sequence -5, -10, -15, -20, -25 upto n where n is taken from the user
+
+n=int(input("enter: "))
+
+i=-5
+c=15
+while (i > n):
+    if i < 0:
+        print(i)
+        i = i+c
+        c = c + 10
+        continue
+    elif i > 0:
+        print(i)
+        i = i - c
+        c = c + 10
+        continue
+##################################################################
+a = "yes"
+b = "no"
+
+while True:
+    x = input("Enter name: ")
+    print("Total Characters in your name is :", len(x))
+
+    ch = input("Want to continue? ")
+    if ch == a:
+        continue
+    if ch == b:
+        break
+    else:
+        print("I don't understand that")
+        break
+##########################################################################
+n=input("enter string: ")
+
+n1=n.split()
+
+print(len(n1))
+##########################################################################
+# WAPP to read a password from the user and check if it is of 8 characters
+n = input("enter password: ")
+
+n1 = len(n)
+
+if n1 != 8:
+    print("password must have 8 characters")
+else:
+    print("ok")
+
+for i in n:
+    if 48 <= ord(i) <= 57:
+        break
+else:
+    print("Password must contain at least one digit")
+###########################################################################################################################
+# write a program which reads a string from the user and converts
+# the first letter of each word capital without using title() function
+
+
+a = (input("Enter String: "))
+
+s=a.split()
+d=""
+for i in s:
+    c=i.capitalize()
+    d=d+c+" "
+print(d)
+####################################################
+# write a program which reads two strings from the user and counts
+# how many times second string exists into first strings
+
+# "we are going to the market . are you . they all are going", "are"
+
+a = input("first string: ")
+b = input("second string: ")
+
+c = a.count(b)
+print(c)
+#########################################################
+a = input("first string: ")
+b = input("enter character:  ")
+
+c=0
+for i in a:
+    if i==b:
+        c=c+1
+print(c)
+########################################
+# write a program that will replace the first half of the string with the second half assuming
+# no. of characters is even
+
+n=input("Input string: ")
+
+if len(n)%2!=0:
+    print("No. of characters should be even")
+else:
+
+    l=len(n)
+    b=n[l//2:]
+    c=n[:l//2]
+
+    d=b+c
+    print(d)
+#######################################################################
+##homestay
+##omestayh@@@
+
+n = input("Enter string: ")
+
+a=n[0]
+c=n[1:]+a+"@@@"
+print(c)
+###################################################################################
+## WAP to print index of all i in Mississippi.
+
+
+n="Mississippi"
+for i in range(len(n)):
+    if n[i] =="i":
+        print(i)
+####################################################################
+## WAP to print index of all i in Mississippi.
+
+
+x=0
+for i in "Mississippi":
+    if i =="i":
+        print(x)
+    x=x+1
+###################################
+## WAP to convert all i to I in Mississippi.
+
+
+x="Mississippi"
+y="i".upper()
+z=x.replace("i",y)
+
+print(z)
+###################################################################################
+import random
+a=input("Enter your choice(rock paper scissors):")
+b=["rock", "paper", "scissors"]
+c=random.choice(b)
+print(f"\nyou chose"{a},"computer chose"{c}.\n)
+if a == c:
+    print(f"Both players selected {a}. It's a tie!")
+elif a == "rock":
+    if c == "scissors":
+        print("Rock smashes scissors! You win!")
+    else:
+        print("Paper covers rock! You lose.")
+elif a == "paper":
+    if c == "rock":
+        print("Paper covers rock! You win!")
+    else:
+        print("Scissors cuts paper! You lose.")
+elif a == "scissors":
+    if c == "paper":
+        print("Scissors cuts paper! You win!")
+    else:
+        print("Rock smashes scissors! You lose.")
+##################################################################################
+x = int(input("Enter the value of x: "))
+
+sum = 0
+m = 1
+
+for i in range(1, 5):
+    fact = 1
+    for j in range(1, i + 1):
+        fact = j
+    term = x ** i / fact
+    sum += term * m
+    m = m * -1
+
+print("Sum =", sum)
+#############################################################################
+command = ""
+started = False
+while True:
+    command = input("> ").lower()
+    if command == "help":
+        print("""
+start - to start a Car
+stop - to stop a Car
+quit - to exit""")
+    elif command == "start":
+        if started:
+            print("Car is already started idiot!!!")
+        else:
+            started = True
+            print("Car started...Ready to go.")
+    elif command == "stop":
+        if not started:
+            print("You can't stop a car two times!!!")
+        else:
+            started = False
+            print("Car stopped.")
+    elif command == "quit":
+        print("Thank you for playing")
+        break
+    else:
+        print("Sorry, I don't understand that")
+###################################################
+################################################################################################
+#########################################
+#######################################
+3(for num in range(1,21):
+    if num>1:
+        for i in range(2,num):
+            if num%i == 0:
+                break
+        else:
+            print(num))
+############################################################
+############################################################
+4(n = int(input("Enter a number: "))
+n1 = n
+s = 0
+
+while n > 0:
+    k = n % 10
+    s = s * 10 + k
+    n = n // 10
+if n1 == s:
+    print(n1, "-It is a palindrome")
+else:
+    print(n1, "-It is not a palindrome"))
+#################################################################################
+##################################################################
+#############################################################
+5(n = int(input("Enter a number: "))
+n1 = n
+c = 0
+while n > 0:
+    c = c+1
+    n = n//10
+f = 0
+g = c-1
+
+for i in range(0,c):
+    n = ((n1//10**i)%10)
+    f+=n*10**(g-i)
+print(f))
+######################################################################
+###########################################################
+###############################################################
+2(a = 'ABCDEFGHIJKLMNOPQRSTUVWXY'
+b = ''
+for letter in a:
+    code = ord(letter)
+    c = chr(code + 1)
+    b = b + c
+print(b))
+#################################################
+\###########################################
+############################
+###################################
+string = input("Enter string: ")
+a = len(string)
+x = ""
+for i in range(1, a):
+    x += string[i]
+x += string[0]
+print(x)
+##############################
+
+#################
+string = input("Enter the string: ")
+x = ""
+for letter in string:
+    c = ord(letter)
+    b = c + 1
+    x += chr(b)
+print(x)
+#################################################################
+print("""1. To move each character left side and first as last character
+2. to code characters(exp. A will become B, assuming no Z or z character)
+3. to display all prime numbers between 1 and 20
+4. to check if an integer is palindrome
+5. TO reverse an integer(no conversion in string)
+6. exit""")
+while True:
+    z = int(input("Enter choice- "))
+
+    if z == 1:
+        string = input("Enter string: ")
+        a = len(string)
+        x = ""
+        for i in range(1, a):
+            x += string[i]
+        x += string[0]
+        print(x)
+
+    elif z == 2:
+        string = input("Enter the string: ")
+        x = ""
+        for letter in string:
+            c = ord(letter)
+            b = c + 1
+            x += chr(b)
+        print(x)
+    elif z == 3:
+        for num in range(1, 21):
+            if num > 1:
+                for i in range(2, num):
+                    if num % i == 0:
+                        break
+                else:
+                    print(num)
+    elif z == 4:
+        n = int(input("Enter a number: "))
+        n1 = n
+        s = 0
+
+        while n > 0:
+            k = n % 10
+            s = s * 10 + k
+            n = n // 10
+        if n1 == s:
+            print(n1, "-It is a palindrome")
+        else:
+            print(n1, "-It is not a palindrome")
+    elif z == 5:
+        n = int(input("Enter a number: "))
+        n1 = n
+        c = 0
+        while n > 0:
+            c = c + 1
+            n = n // 10
+        f = 0
+        g = c - 1
+
+        for i in range(0, c):
+            n = ((n1 // 10 ** i) % 10)
+            f += n * 10 ** (g - i)
+        print(f)
+    elif z == 6:
+        print("exit")
+        break
+#################################################
+import mysql.connector as cn
+db = cn.connect(host='localhost', user='root', password='',database='covid_hospital')
+cursor = db.cursor()
+def add():
+    n = int(input("enter no of records you would like to add: "))
+    for i in range(n):
+        n = input("patient name: ")
+        f = input("father name: ")
+        a = input("address: ")
+        ph = int(input("phone_no: "))
+        i = input("any illness you are suffering from(Sugar, BP,Diabetes,blank for no): ")
+        s = input("symptoms: ")
+        d = input("Date of Admission: ")
+        do = input("Date of Discharge: ")
+        r = input("recovered (Y/N): ")
+        doc = input("Doctor Name: ")
+        ro = int(input("Room no: "))
+        b=input("bed no.: ")
+        cursor.execute("insert into covid_info(patientname, fathername, address,phoneno,illness, symptoms,DOA, DOD,\
+        recovered,doctorname,roomno,bedno) values('{}','{}','{}',{},'{}','{}','{}','{}','{}','{}',{},\
+        {})".format(n, f, a, ph, i, s, d, do, r, doc, ro, b))
+        db.commit()
+        print("Details inserted")
+    print()
+    mainmenu()
+
+
+def search():
+    a = input("enter name of patient to search for: ")
+    y = int(input("enter phoneno: "))
+    z = int(input("enter patient id: "))
+    cursor.execute("select * from covid_info")
+    records = cursor.fetchall()
+    for i in records:
+        if i[1] == a and i[4] == y and i[0] == z:
+            print("patientname = ", i[1])
+            print("fathername = ", i[2])
+            print("address", i[3])
+            print("phoneno = ", i[4])
+            print("illness = ", i[5])
+            print("symptoms = ", [6])
+            print("DOA=", i[7])
+            print("DOD = ", i[8])
+            print("recovered(Y/N) = ", i[9])
+            print("doctorname = ", i[10])
+            print("roomno, = ", i[11])
+            print("bedno. = ", i[12])
+            print()
+        else:
+            print("not found")
+    mainmenu()
+
+
+def update():
+    y = input("enter your previous recovery status: ")
+    x = input("enter new status: ")
+    cursor.execute("update covid_info set recovered='{}'".format(x, y))
+    db.commit()
+    print("Status updated")
+    print()
+    mainmenu()
+
+
+def delete():
+    n = int(input("enter no of records you would like to delete: "))
+    for i in range(n):
+        p = input("enter the Name of patient whose record you like to delete: ")
+        cursor.execute("delete from covid_info where patientname='{}'".format(p))
+        db.commit()
+        print("Record deleted!")
+        print()
+    mainmenu()
+
+
+def display():
+    cursor.execute("select * from covid_info")
+    records = cursor.fetchall()
+    n=0
+    for i in records:
+        print("Record: ",n)
+        print("patientname = ", i[1])
+        print("fathername = ", i[2])
+        print("address", i[3])
+        print("phoneno.=", i[4])
+        print("illness = ", i[5])
+        print("symptoms = ", i[6])
+        print("DOA=", i[7])
+        print("DOD = ", i[8])
+        print("recovered(Y/N)", i[9])
+        print("doctorname = ", i[10])
+        print("roomno.", i[11])
+        print("bedno=", i[12])
+        print()
+    mainmenu()
+
+
+def mainmenu():
+    print("1:ADD")
+    print("2:UPDATE")
+    print("3:DELETE")
+    print("4:SEARCH")
+    print("5:DISPLAY")
+    print("6:EXIT")
+    print()
+    ch = int(input("enter choice: "))
+    if ch == 1:
+        add()
+    elif ch == 2:
+        update()
+    elif ch == 3:
+        delete()
+    elif ch == 4:
+        search()
+    elif ch == 5:
+        display()
+    elif ch == 6:
+        exit()
+    else:
+        print("choice is invalid")
+mainmenu()
+#########################################################################
+import mysql.connector as cn
+db=cn.connect(host="localhost", user="root",password="")
+cur=db.cursor()
+cur.execute("drop database Reg")
+cur.execute("create database reg")
+cur.execute("use reg")
+cur.execute("create table registration_info(name varchar(30), userid varchar(30),pwd varchar(50),phoneno bigint);")
+def registration():
+    x=int(input("Enter no. of records u want to enter: "))
+    for i in range(x):
+        n=input("Eter name: ")
+        ud=input("Enter userid: ")
+        p=input("Enter password")
+        pn=int(input("Enter phone no.: "))
+        cur.execute("insert into registration_info(name ,userid ,pwd ,phoneno) values('{}','{}','{}',{})".format(n,ud,p,pn))
+        db.commit()
+        print("Details inserted")
+        print()
+def login():
+    x=input("Enter userid: ")
+    y=input("Enter password: ")
+    cur.execute("select * from registration_info")
+    recs=cur.fetchall()
+    for i in recs:
+        if i[1]==x and i[2]==y:
+            print("Hello",i[0])
+            print("Welcome!!, we are greatfull to serve you")
+        else:
+            print("Oops!!, sorry",i[0])
+            print("You are not registered. please do register first")
+print("1: Registration\n2: Login\n3: Exit")
+print()
+while True:
+    ch=int(input("Enter Choice: "))
+    if ch==1:
+        registration()
+    elif ch==2:
+        login()
+    elif ch==3:
+        break
+    else:
+        print("Invalid choice")
+######################################################################################
+import mysql.connector as cn
+
+db = cn.connect(host='localhost', user='root', password='')
+cur = db.cursor()
+cur.execute("drop database project")
+cur.execute("create database project")
+cur.execute("use project")
+cur.execute("create table payroll(e_id int primary key, e_name varchar(50),ctc bigint, basic bigint, lwp int\
+, overtime int,allowance int, hra int, tax int, pf int, gross int, total bigint)")
+idd_l = []
+cur.execute("select e_id from payroll")
+recs = cur.fetchall()
+for i in recs:
+    idd_l.append(i[0])
+while True:
+    print("WHAT WOULD YOU LIKE TO DO?")
+    print("1. Add employee record")
+    print("2. Update employee record")
+    print("3. Delete employee record")
+    print("4. Exit")
+    x = int(input("choose:"))
+    if x == 1:
+        idd = int(input("enter employee id:"))
+        idd_l.append(idd)
+        nm = input("enter employee name:")
+        ctc = int(input("enter cost to company:"))
+        basic = 0.5 * ctc
+        lwp = int(input("enter number of leaves without pay:"))
+        ov = int(input("enter number of overtime hours:"))
+        al = int(input("enter allowances(medical,travel,dearness):"))
+        hra = 0.5 * basic
+        tot_all = basic + al
+        print(tot_all)
+        if tot_all < 250000:
+            tax = 0
+        elif 250000 <= tot_all < 500000:
+            tax = 5 / 100
+        elif 500000 <= tot_all < 750000:
+            tax = 10 / 100
+        elif 750000 <= tot_all < 1000000:
+            tax = 15 / 100
+        elif 1000000 <= tot_all < 1250000:
+            tax = 20 / 100
+        elif 1250000 <= tot_all < 1500000:
+            tax = 25 / 100
+        elif tot_all >= 1500000:
+            tax = 30 / 100
+            print("tax", tax)
+            pf = 12 / 100 * tot_all
+            print("pf", pf)
+            gross = tot_all
+            sal_day = gross / 30
+            overtime = (sal_day / 8) * ov * 2
+            print("taxed amount", gross * tax)
+            print(lwp * sal_day)
+            total = (gross + overtime + hra) - (gross * tax) - (lwp * sal_day) - pf
+            cur.execute("insert into payroll\
+            values({},'{}',{},{},{},{},{},{},{},{},{},{})".format(idd, nm, ctc, basic, lwp, ov, al, hra, tax, pf, gross\
+            , total))
+            db.commit()
+
+    elif x == 2:
+        idd = int(input("enter employee id to update record:"))
+        if idd in idd_l:
+            nm = input("enter updated employee name:")
+            ctc = int(input("enter updated cost to company:"))
+            basic = 0.5 * ctc
+            lwp = int(input("enter updated number of leaves without pay:"))
+            ov = int(input("enter updated number of overtime hours:"))
+            al = int(input("enter updated allowances(medical,travel,dearness):"))
+            hra = 0.5 * basic
+            totall = basic + al
+            if tot_all < 250000:
+                tax = 0
+            if 250000 <= tot_all < 500000:
+                tax = 5 / 100
+            if 500000 <= tot_all < 750000:
+                tax = 10 / 100
+            if 750000 <= tot_all < 1000000:
+                tax = 15 / 100
+            if 1000000 <= tot_all < 1250000:
+                tax = 20 / 100
+            if 1250000 <= tot_all < 1500000:
+                tax = 25 / 100
+            if tot_all >= 1500000:
+                tax = 30 / 100
+            pf = 12 / 100 * tot_all
+            gross = tot_all
+            sal_day = gross / 30
+            overtime = (sal_day / 8) * ov * 2
+            tot_al = (gross + overtime + hra) - (gross * tax) - (lwp * sal_day) - pf
+            cur.execute("update payroll set e_name='{}',ctc={},basic={},lwp={},overtime={},allowance={},hra={},tax={}\
+            ,pf={},gross={},total={} where e_id={}".format(nm, ctc, basic, lwp, ov, al, hra, tax, pf, gross, total, idd))
+            print("UPDATED SUCCESSFULLY")
+            db.commit()
+        else:
+            print("such employee doesnt exist")
+    elif x == 3:
+        idd = int(input("enter employee id to delete record:"))
+        if idd in idd_l:
+            cur.execute("delete from payroll where e_id={}".format(idd))
+            print("DELETED SUCCESSFULLY")
+            db.commit()
+        else:
+            print("such employee doesnt exist")
+
+    else:
+        break
+#####################################################################################################
+loan_price = 100000
+credit = 200000
+
+has_high_income = True
+has_good_credit = True
+
+if has_high_income:
+    salary = input('What is your income: ')
+    if int(salary) > loan_price:
+        print('ok')
+    if int(salary) < loan_price:
+        print('Sorry you are not eligible for loan')
+    if has_good_credit:
+        savings = input('What are your savings: ')
+    if int(savings) > credit:
+        print('ok')
+    if int(savings) < credit:
+        print('Sorry you are not eligible for loan')
+
+print("Eligible for Loan")
+print("Thank you - support team")
+#############################################################################################
+import os
+import platform
+import mysql.connector as cn
+import pandas as pd
+
+db = cn.connect(host='localhost', user='root', passwd='', database='bank')
+cur = db.cursor()
+
+def accInsert():
+    l = []
+    accno = int(input("Enter the Account number: "))
+    l.append(accno)
+    name = input("Enter the Customer Name: ")
+    l.append(name)
+    age = int(input("Enter Age of Customer: "))
+    l.append(age)
+    occup = input("Enter the Customer Occupation: ")
+    l.append(occup)
+    address = input("Enter the Address of the Customer: ")
+    l.append(address)
+    mob = int(input("Enter the Mobile number: "))
+    l.append(mob)
+    adharno = int(input("Enter the Aadhar number: "))
+    l.append(adharno)
+    amt = float(input("Enter the Money Deposited : "))
+    l.append(amt)
+    accType = input("Enter the Account Type (Saving/RD/PPF/Current): ")
+    l.append(accType)
+    cust = l
+    sql = """Insert into ACCOUNT(Accno,Name,Age,occup,Address,Mob,Adharno,amt,Acctype)
+    values(%s,%s,%s, %s,%s,%s, %s,%s,%s)"""
+    cur.execute(sql, cust)
+    db.commit()
+
+
+accInsert()
+
+
+def accView():
+    print("Select the search criteria: ")
+    print("1. Acc no")
+    print("2. Name")
+    print("3. Mobile")
+    print("4. Adharno")
+    print("5. View All")
+    ch = int(input("Enter the choice: "))
+    if ch == 1:
+        s = int(input("Enter ACC no: "))
+        rl = (s,)
+        sql = "select * from account where Accno=%s"
+        cur.execute(sql, rl)
+    elif ch == 2:
+        s = input("Enter Name: ")
+        rl = (s,)
+        sql = "select * from account where Name=%s"
+        cur.execute(sql, rl)
+    elif ch == 3:
+        s = int(input("Enter Mobile No: "))
+        rl = (s,)
+        sql = "select * from account where Mob=%s"
+        cur.execute(sql, rl)
+    elif ch == 4:
+        s = input("Enter Adharno: ")
+        rl = (s,)
+        sql = "select * from account where Adharno=%s"
+        cur.execute(sql, rl)
+    elif ch == 5:
+        sql = "select * from account"
+        cur.execute(sql)
+
+
+recs = cur.fetchall()
+print("The Customer details are as follows: ")
+k = pd.DataFrame(recs, columns=['AccNo', 'Name', 'Age', 'Occup', 'Add', 'Mob', 'Adharno', 'Amount', 'Acctype'])
+print(k)
+
+accView()
+
+
+def accDeposit():
+    l = []
+    accno = int(input("Enter the Account number: "))
+    l.append(accno)
+    amtdeposit = eval(input("Enter the Amount to be deposited: "))
+    l.append(amtdeposit)
+    month = input("Enter month of Salary: ")
+    l.append(month)
+    cust = l
+    sql = "Insert into amt values(%s,%s,%s)"
+    cur.execute(sql, cust)
+    db.commit()
+
+
+accDeposit()
+
+
+def accView():
+    print("Please enter the details to view the Money details: ")
+    accno = int(input("Enter the Account number of the Customer whose amount is to be viewed: "))
+    sql = """Select Account.Accno, Account.Name,Account.Age,Account.occup,Account.Address,Account.Mob,
+    Account.Adharno,Account.Amt,Account.Acctype, sum(amt.Amtdeposit), amt.month from Account INNER JOIN amt ON
+    Account.Accno=amt.Accno and amt.Accno = %s """
+    rl = (accno,)
+    cur.execute(sql, rl)
+    rec = cur.fetchall()
+    for i in rec:
+        print(i)
+
+
+accView()
+
+
+def closeAcc():
+    accno = int(input("Enter the Account number of the Customer to be closed : "))
+    rl = (accno,)
+    sql = "Delete from amt where Accno=%s"
+    cur.execute(sql, rl)
+    db.commit()
+
+
+closeAcc()
+
+
+def menuSet():
+    print("Enter 1 : To Add Customer")
+    print("Enter 2 : To View Customer")
+    print("Enter 3 : To Deposit Money")
+    print("Enter 4 : To Close Account")
+    print("Enter 5 : To View All Customer Details")
+    try:
+        userInput = int(input("Please Select An Above Option: "))
+    except ValueError:
+        exit("\nHey! That's Not A Number")
+    else:
+        print("\n")
+        if userInput == 1:
+            accInsert()
+        elif userInput == 2:
+            accView()
+        elif userInput == 3:
+            accDeposit()
+        elif userInput == 4:
+            closeAcc()
+        elif userInput == 5:
+            accView()
+        else:
+            print("Enter correct choice. . . ")
+
+
+menuSet()
+
+
+def runAgain():
+    runAgn = input("\nwant To Run Again Y/n: ")
+    while (runAgn.lower() == 'y'):
+        if platform.system() == 'Windows':
+            print(os.system('cls'))
+        else:
+            print(os.system('clear'))
+    menuSet()
+    runAgn = input("\nwant To Run Again Y/N: ")
+
+
+runAgain()
+
+menuSet()
+
+
+
+
+
+
+
+
+
+
+
+
+
+def report_menu():
+    while True:
+        clear()
+        print('   R E P O R T   M E N U ')
+        print('-' * 100)
+        print('1.   Item List')
+        print('2.   Sell Between Dates')
+        print('3.   Bill information')
+        print('4.   Amount collected')
+        print('5.   Back to main Menu')
+        choice = int(input('\n\nEnter your choice (1..5): '))
+        if choice == 1:
+            item_list()
+        if choice == 2:
+            date_wise_sell()
+        if choice == 3:
+            bill_information()
+        if choice == 4:
+            amount_collected()
+        if choice == 5:
+            break
+
+
+
+
+
+
+
+
+def amount_collected():
+    clear()
+    start_date = input('Enter start Date (yyyy-mm-dd) :')
+    end_date = input('Enter End   Date (yyyy-mm-dd) :')
+    clear()
+    print('Amount collected between: {} and {}'.format(start_date, end_date))
+    print('^' * 100)
+    sql = ('select sum(t.qty*i.price) from bills b,transaction t,items i \
+		   where b.bill_date between "{}" AND "{}" AND b.bill_id = t.bill_id AND \
+		   t.item_id = i.id;'.format(start_date, end_date))
+    cur.execute(sql)
+    result = cur.fetchone()
+    print(result)
+    print('\nPress any key to continue.....')
+    a = input()
+
+
+def item_list():
+    clear()
+    sql = "select * from items"
+    cur.execute(sql)
+    records = cur.fetchall()
+    for row in records:
+        print(row)
+    print('\nPress any key to continue.....')
+    a = input()
+
+
+
+
+
+
+def date_wise_sell():
+    clear()
+    print('Sell Between Two Dates -- Screen')
+    print('-' * 100)
+    start_date = input('Enter start Date (yyyy-mm-dd) :')
+    end_date = input('Enter End Date (yyyy-mm-dd) :')
+    sql = ('select * from bills where bill_date between "{}" and "{}"'.format(start_date, end_date))
+    cur.execute(sql)
+    records = cur.fetchall()
+    clear()
+    print('Bill No       Customer Name         Phone No         Bill Date')
+    print('-' * 100)
+    for row in records:
+        print('{:10d} {:30s} {:20s} {}'.format(row[0], row[1], row[2], row[3]))
+    print('-' * 100)
+    print('\n\nPress any key to continue....')
+    a = input()
+
+
+def modify_item():
+    clear()
+    print('Modify Item Details - Screen')
+    print('-' * 100)
+    item_id = input('Enter Item ID :')
+    item_name = input('Enter new Item Name :')
+    item_price = input('Enter Item Price :')
+    sql = ('update items set item_name = "{}", price ={} where id={}'.format(item_id, item_name, item_price))
+    cur.execute(sql)
+    print('\n\nRecord Updated Successfully............')
+###########################################################################################################
+def search():
+    import mysql.connector as cn
+
+    db = cn.connect(host="localhost", user='root', passwd='MehulBisht', database='employess', charset='utf8')
+    cur = db.cursor()
+    cur.execute("select * from emp")
+
+    recs = cur.fetchall()
+    k = 1
+    for i in recs:
+        print("Record: ", k, "\n", "**********************")
+        print("Empno: ", i[0], "\nName: ", i[1], "\nSalary: ", i[2], "\n")
+        k = k + 1
+
+
+def update():
+    import mysql.connector as cn
+
+    db = cn.connect(host="localhost", user="root", passwd="MehulBisht", database="Employess", charset="utf8")
+    cur = db.cursor()
+    x = int(input("Enter empno to update"))
+    cur.execute("select * from emp where empno={}".format(x))
+    rec = cur.fetchone()
+    print(rec)
+    n1 = input("Enter new Name")
+    s1 = int(input("Enter new Salary"))
+    cur.execute("update emp set name='{}', salary ={} where empno={}".format(n1, s1, x))
+    db.commit()
+    cur.execute("select *from emp where empno={}".format(x))
+    rec = cur.fetchone()
+    print(rec)
+
+
+def insert():
+    import mysql.connector as cn
+    db = cn.connect(host="localhost", user="root", passwd="MehulBisht", database="Employess", charset="utf8")
+    cur = db.cursor()
+    e = int(input("Enter empno to add"))
+    n = input("Enter name to add")
+    s = int(input("Enter salary to add "))
+    cur.execute("insert into emp values ({}, '{}', {})".format(e, n, s))
+    db.commit()
+    cur.execute("select * from emp")
+    recs = cur.fetchall()
+    for i in recs:
+        print(i)
+
+
+def delete():
+    import mysql.connector as cn
+
+    db = cn.connect(host="localhost", user="root", passwd="MehulBisht", database="Employess", charset="utf8")
+    cur = db.cursor()
+    x = int(input("Enter empno to delete"))
+    cur.execute("select * from emp where empno={}".format(x))
+    rec = cur.fetchone()
+    print("Record being deleted is ", rec)
+
+    cur.execute("delete from emp where empno={}".format(x))
+    db.commit()
+    cur.execute("select * from emp")
+    recs = cur.fetchall()
+    for i in recs:
+        print(i)
+
+
+print("Welcome to Mysql based program")
+print("1) Search ----> 1")
+print("2) Update ----> 2")
+print("3) Insert ----> 3")
+print("4) Delete ----> 4")
+print("5) Exit ----> 5")
+while True:
+    a = int(input("Enter your choice: "))
+    if a == 1:
+        search()
+    elif a == 2:
+        update()
+    elif a == 3:
+        insert()
+    elif a == 4:
+        delete()
+    elif a == 5:
+        break
+    else:
+        continue
+
+    b = input("would you like to continue (y/n): ")
+    if b == "n":
+        print("Thank you")
+        break
+##########################################################################
+def search():
+    import mysql.connector as cn
+
+    db = cn.connect(host="localhost", user='root', passwd='MehulBisht', database='employess', charset='utf8')
+    cur = db.cursor()
+    cur.execute("select * from emp")
+
+    recs = cur.fetchall()
+    k = 1
+    for i in recs:
+        print("Record: ", k, "\n", "**********************")
+        print("Empno: ", i[0], "\nName: ", i[1], "\nSalary: ", i[2], "\n")
+        k = k + 1
+
+
+def update():
+    import mysql.connector as cn
+
+    db = cn.connect(host="localhost", user="root", passwd="MehulBisht", database="Employess", charset="utf8")
+    cur = db.cursor()
+    x = int(input("Enter empno to update"))
+    cur.execute("select * from emp where empno={}".format(x))
+    rec = cur.fetchone()
+    print(rec)
+    n1 = input("Enter new Name")
+    s1 = int(input("Enter new Salary"))
+    cur.execute("update emp set name='{}', salary ={} where empno={}".format(n1, s1, x))
+    db.commit()
+    cur.execute("select *from emp where empno={}".format(x))
+    rec = cur.fetchone()
+    print(rec)
+
+
+def insert():
+    import mysql.connector as cn
+    db = cn.connect(host="localhost", user="root", passwd="MehulBisht", database="Employess", charset="utf8")
+    cur = db.cursor()
+    e = int(input("Enter empno to add"))
+    n = input("Enter name to add")
+    s = int(input("Enter salary to add "))
+    cur.execute("insert into emp values ({}, '{}', {})".format(e, n, s))
+    db.commit()
+    cur.execute("select * from emp")
+    recs = cur.fetchall()
+    for i in recs:
+        print(i)
+
+
+def delete():
+    import mysql.connector as cn
+
+    db = cn.connect(host="localhost", user="root", passwd="MehulBisht", database="Employess", charset="utf8")
+    cur = db.cursor()
+    x = int(input("Enter empno to delete"))
+    cur.execute("select * from emp where empno={}".format(x))
+    rec = cur.fetchone()
+    print("Record being deleted is ", rec)
+
+    cur.execute("delete from emp where empno={}".format(x))
+    db.commit()
+    cur.execute("select * from emp")
+    recs = cur.fetchall()
+    for i in recs:
+        print(i)
+
+
+print("Welcome to Mysql based program")
+print("1) Search ----> 1")
+print("2) Update ----> 2")
+print("3) Insert ----> 3")
+print("4) Delete ----> 4")
+print("5) Exit ----> 5")
+while True:
+    a = int(input("Enter your choice: "))
+    if a == 1:
+        search()
+    elif a == 2:
+        update()
+    elif a == 3:
+        insert()
+    elif a == 4:
+        delete()
+    elif a == 5:
+        break
+    else:
+        continue
+
+    b = input("would you like to continue (y/n): ")
+    if b == "n":
+        print("Thank you")
+        break
+########################################################################
+import pickle
+
+a_data = {}
+s = int(input("Enter no. of student records: "))
+for i in range(s):
+    a_data["rollno"] = int(input("Enter roll no: "))
+    a_data["name"] = input("Enter name: ")
+    a_data["marks"] = int(input("Enter marks: "))
+
+with open("record.dat", "wb") as file:
+    pickle.dump(a_data, file)
+file.close()
+with open("record.dat", "rb+") as file:
+    r = int(input("roll no of student to update: "))
+    try:
+        while True:
+            p = file.tell()
+            str = pickle.load(file)
+            for i in str:
+                if str['rollno'] == r:
+                    str['marks'] = float(input("Enter marks to update: "))
+                    file.seek(p)
+                    pickle.dump(str, file)
+                    break
+    except EOFError:
+        file.close()
+with open("record.dat", "rb") as file:
+    try:
+        while True:
+            str2 = pickle.load(file)
+            print("Marks updated succesfully")
+    except EOFError:
+        file.close()
+##########################################################
+import os
+import platform
+import mysql.connector as cn
+import pandas as pd
+
+db = cn.connect(host="localhost", user='root', passwd='', database='bank', charset='utf8')
+cur = db.cursor()
+
+
+def AccInsert():
+    L = []
+    Accno = int(input("Enter the Account number: "))
+    L.append(Accno)
+    name = input("Enter the Customer Name: ")
+    L.append(name)
+    age = int(input("Enter Age of Customer: "))
+    L.append(age)
+    occup = input("Enter the Customer Occupation: ")
+    L.append(occup)
+    Address = input("Enter the Address of the Customer: ")
+    L.append(Address)
+    Mob = int(input("Enter the Mobile number: "))
+    L.append(Mob)
+    Adharno = int(input("Enter the Aadhar number: "))
+    L.append(Adharno)
+    Amt = float(input("Enter the Money Deposited : "))
+    L.append(Amt)
+    AccType = input("Enter the Account Type (Saving/RD/PPF/Current): ")
+    L.append(AccType)
+    cust = L
+    sql = """Insert into ACCOUNT(Accno,Name,Age,occup,Address,Mob,Adharno,amt,Acctype)
+    values(%s,%s,%s, %s,%s,%s, %s,%s,%s)"""
+    cur.execute(sql, cust)
+    db.commit()
+
+
+AccInsert()
+
+
+def AccView():
+    print("Select the search criteria: ")
+    print("1. Acc no")
+    print("2. Name")
+    print("3. Mobile")
+    print("4. Adharno")
+    print("5. View All")
+    ch = int(input("Enter the choice: "))
+    if ch == 1:
+        s = int(input("Enter ACC no: "))
+        rl = (s,)
+        sql = "select * from account where Accno=%s"
+        cur.execute(sql, rl)
+    elif ch == 2:
+        s = input("Enter Name: ")
+        rl = (s,)
+        sql = "select * from account where Name=%s"
+        cur.execute(sql, rl)
+    elif ch == 3:
+        s = int(input("Enter Mobile No: "))
+        rl = (s,)
+        sql = "select * from account where Mob=%s"
+        cur.execute(sql, rl)
+    elif ch == 4:
+        s = input("Enter Adharno: ")
+        rl = (s,)
+        sql = "select * from account where Adharno=%s"
+        cur.execute(sql, rl)
+    elif ch == 5:
+        sql = "select * from account"
+        cur.execute(sql)
+
+
+recs = cur.fetchall()
+print("The Customer details are as follows: ")
+k = pd.DataFrame(recs, columns=['AccNo', 'Name', 'Age', 'Occup', 'Add', 'Mob', 'Adharno', 'Amount', 'Acctype'])
+print(k)
+
+
+AccView()
+
+
+def AccDeposit():
+    L = []
+    Accno = int(input("Enter the Account number: "))
+    L.append(Accno)
+    Amtdeposit = eval(input("Enter the Amount to be deposited: "))
+    L.append(Amtdeposit)
+    month = input("Enter month of Salary: ")
+    L.append(month)
+    cust = L
+    sql = "Insert into amt values(%s,%s,%s)"
+    cur.execute(sql, cust)
+    db.commit()
+
+
+AccDeposit()
+
+
+def accView():
+    print("Please enter the details to view the Money details: ")
+    Accno = int(input("Enter the Account number of the Customer whose amount is to be viewed: "))
+    sql = """Select Account.Accno, Account.Name,Account.Age,Account.occup,Account.Address,Account.Mob,
+    Account.Adharno,Account.Amt,Account.Acctype, sum(amt.Amtdeposit), amt.month from Account INNER JOIN amt ON
+    Account.Accno=amt.Accno and amt.Accno = %s """
+    rl = (Accno,)
+    cur.execute(sql, rl)
+    rec = cur.fetchall()
+    for i in rec:
+        print(i)
+
+
+accView()
+
+
+def closeAcc():
+    Accno = int(input("Enter the Account number of the Customer to be closed : "))
+    rl = (Accno,)
+    sql = "Delete from amt where Accno=%s"
+    cur.execute(sql, rl)
+    db.commit()
+
+
+closeAcc()
+
+
+def MenuSet():
+    print("Enter 1 : To Add Customer")
+    print("Enter 2 : To View Customer")
+    print("Enter 3 : To Deposit Money")
+    print("Enter 4 : To Close Account")
+    print("Enter 5 : To View All Customer Details")
+    try:
+        userInput = int(input("Please Select An Above Option: "))
+    except ValueError:
+        exit("\nHey! That's Not A Number")
+    else:
+        print("\n")
+        if userInput == 1:
+            AccInsert()
+        elif userInput == 2:
+            accView()
+        elif userInput == 3:
+            AccDeposit()
+        elif userInput == 4:
+            closeAcc()
+        elif userInput == 5:
+            accView()
+        else:
+            print("Enter correct choice. . . ")
+
+
+MenuSet()
+
+
+def runAgain():
+    runAgn = input("\nwant To Run Again Y/n: ")
+    while runAgn.lower() == 'y':
+        if platform.system() == 'Windows':
+            print(os.system('cls'))
+        else:
+            print(os.system('clear'))
+        MenuSet()
+
+
+runAgain()
+###############################################################
+s = input("Enter string: ")
+a = s.lower()
+
+v = "aeiou"
+c = "bcdfghjklmnpqrstvwxyz"
+d = "1234567890"
+s = " "
+
+consonants = 0
+vowels = 0
+digits = 0
+space = 0
+symbols = 0
+
+for i in a:
+    if i in v:
+        vowels += 1
+    elif i in c:
+        consonants += 1
+    elif i in d:
+        digits += 1
+    elif i in s:
+        space += 1
+    else:
+        symbols = symbols + 1
+
+print("Consonants: ", consonants)
+print("Vowels: ", vowels)
+print("digits: ", digits)
+print("space: ", space)
+print("symbols: ", symbols)
+########################################################################################
+import numpy as np
+from scipy.signal import convolve2d
+import matplotlib.pyplot as plt
+from matplotlib import animation
+
+# Width, height of the image.
+nx, ny = 600, 450
+# Reaction parameters.
+alpha, beta, gamma = 1, 1, 1
+
+def update(p,arr):
+    """Update arr[p] to arr[q] by evolving in time."""
+
+    # Count the average amount of each species in the 9 cells around each cell
+    # by convolution with the 3x3 array m.
+    q = (p+1) % 2
+    s = np.zeros((3, ny,nx))
+    m = np.ones((3,3)) / 9
+    for k in range(3):
+        s[k] = convolve2d(arr[p,k], m, mode='same', boundary='wrap')
+    # Apply the reaction equations
+    arr[q,0] = s[0] + s[0]*(alpha*s[1] - gamma*s[2])
+    arr[q,1] = s[1] + s[1]*(beta*s[2] - alpha*s[0])
+    arr[q,2] = s[2] + s[2]*(gamma*s[0] - beta*s[1])
+    # Ensure the species concentrations are kept within [0,1].
+    np.clip(arr[q], 0, 1, arr[q])
+    return arr
+
+# Initialize the array with random amounts of A, B and C.
+arr = np.random.random(size=(2, 3, ny, nx))
+
+# Set up the image
+fig, ax = plt.subplots()
+im = ax.imshow(arr[0,0], cmap=plt.cm.winter)
+ax.axis('off')
+
+def animate(i, arr):
+    """Update the image for iteration i of the Matplotlib animation."""
+
+    arr = update(i % 2, arr)
+    im.set_array(arr[i % 2, 0])
+    return [im]
+
+anim = animation.FuncAnimation(fig, animate, frames=200, interval=5,blit=False, fargs=(arr,))
+
+# To view the animation, uncomment this line
+plt.show()
+
+# To save the animation as an MP4 movie, uncomment this line
+anim.save(filename='bz.mp4', fps=30)
+###########################################################
+import mysql.connector as cn
+from datetime import date
+
+global cn, cur
+db = cn.connect(host='localhost', user='root', passwd='', database='bill')
+cur = db.cursor()
+
+
+def clear():
+    for i in range(6):
+        print()
+
+
+def last_bill_no():
+    cur.execute('select max(bill_id) from bills')
+    record = cur.fetchone()
+    return record
+
+
+def find_item(no):
+    cur.execute('select * from items where id ={}'.format(no))
+    record = cur.fetchone()
+    return record
+
+
+def add_item():
+    clear()
+    print('Add New Item - Screen')
+    print('-' * 100)
+    item_name = input('Enter new Item Name :')
+    item_price = input('Enter Item Price :')
+    sql = ('select * from items where item_name like "%{}%"'.format(item_name))
+    cur.execute(sql)
+    record = cur.fetchone()
+    if record is None:
+        sql = ('insert into items(item_name,price) values("{}",{});'.format(item_name, item_price))
+        cur.execute(sql)
+        print('\n\nNew Item added successfully.....\nPress any key to continue....')
+    else:
+        print('\n\nItem Name already Exist.....\nPress any key to continue....')
+    a = input()
+
+def billing():
+    clear()
+    items = []
+    bill_no = last_bill_no()
+    if bill_no[0] is None:
+        bill_no = 1
+    else:
+        bill_no = bill_no[0] + 1
+
+    name = input('Enter customer Name :')
+    phone = input('Enter Phone No :')
+    today = date.today()
+    while True:
+        no = int(input('Enter item No (0 to stop) :'))
+        if no <= 0:
+            break
+        else:
+            item = find_item(no)
+            if item is None:
+                print('Item Not found  ')
+            else:
+                qty = int(input('Enter Item Qty :'))
+                item = list(item)
+                item.append(qty)
+                items.append(item)
+
+    clear()
+    print('                     NOICE-MORBIUS Mart              ')
+    print('                     MORB Block,MORBIN, second floor,MORBIUS Nagar     ')
+    print('                     Phone: 2323232323, Email: itsmorbintime@gmail.com ')
+    print('Bill No :{}        Date :{}'.format(bill_no, today))
+    print('^' * 100)
+    print('Customer Name :{}          Phone No :{}'.format(name, phone))
+    print('^' * 100)
+    print('Item Id     Item Name                Price            Qty            Amount ')
+    print('^' * 100)
+    total = 0
+    for item in items:
+        print('{:<10d} {:25s} {:.2f} {:>10d} {:>.2f} '.format(item[0], item[1], item[2], item[3], item[2] * item[3]))
+        total = total + item[2] * item[3]
+    print('-' * 100)
+    print('Total Payable amount : {}'.format(total))
+    print('\nPress any key to continue........')
+    sql = 'insert into bills(name,phone,bill_date) values("{}","{}","{}");'.format(name, phone, today)
+    cur.execute(sql)
+    for item in items:
+        sql = 'insert into transaction(item_id,qty,bill_id) values({},{},{});'.format(item[0], item[3], bill_no)
+        cur.execute(sql)
+    a = input()
+
+
+def bill_information():
+    clear()
+    bill_no = input('Enter Bill Number :')
+    sql = ("select b.bill_id,b.name,b.phone,b.bill_date,t.item_id,t.qty,i.item_name,i.price from bills b,transaction t,\
+    items i where b.bill_id'' = t.bill_id AND t.item_id= i.id AND b.bill_id ={};".format(bill_no))
+    cur.execute(sql)
+    records = cur.fetchall()
+    n = cur.rowcount
+    clear()
+    print("Bill No :", bill_no)
+    print('-' * 100)
+    if n <= 0:
+        print('Bill number {} does not exists'.format(bill_no))
+    else:
+        print('Customer Name : {}  Phone No :{}'.format(records[0][1], records[0][2]))
+        print('Bill Date : {}'.format(records[0][3]))
+        print('^' * 100)
+        print('{:10s} {:30s} {:20s} {:10s} {:30s}'.format('ID', 'Item Name', 'Qty','Price', 'Amount'))
+        print('^' * 100)
+        for row in records:
+            print('{:<10d} {:30s} {:<20d} {:.2f} {:>.2f}'.format(row[4], row[6], row[5], row[7], row[5] * row[7]))
+        print('^' * 100)
+    print('\nPress any key to continue....')
+    a = input()
+
+
+def search_item():
+    clear()
+    item_name = input('Enter Item Name :')
+    sql = ('select * from items where item_name like "%{}%";'.format(item_name))
+    cur.execute(sql)
+    records = cur.fetchall()
+    clear()
+    print('Item Names start with :', item_name)
+    print('^' * 100)
+    print('{:10s} {:30s} {:20s}'.format('Item ID', 'Item Name', 'Item Price'))
+    print('^' * 100)
+    for row in records:
+        print('{:<10d} {:30s} {:.2f}'.format(row[0], row[1], row[2]))
+    print('^' * 100)
+    print('\nPress any key to continue....')
+    a = input()
+
+
+def search_customer():
+    clear()
+    cust_name = input('Enter customer Name :')
+    sql = ('select * from bills where name like "%{}%";'.format(cust_name))
+    cur.execute(sql)
+    records = cur.fetchall()
+    clear()
+    print('Customer Names started with :', cust_name)
+    print('^' * 100)
+    print('{:10s} {:30s} {:20s} {:20s}'.format('Bill No', 'Customer Name','Phone No', 'Bill Date'))
+    print('^' * 100)
+    for row in records:
+        print('{:<10d} {:30s} {:20s} {:20s}'.format(row[0], row[1],row[2], str(row[3])))
+    print('^' * 100)
+    print('\nPress any key to continue....')
+    a = input()
+
+def search_bill():
+    clear()
+    bill_no = input('Enter Bill Number :')
+    sql = ("select b.bill_id,b.name,b.phone,b.bill_date,t.item_id,t.qty,i.item_name,i.price from bills b,transaction t,\
+    items i where b.bill_id = t.bill_id AND t.item_id= i.id AND b.bill_id ={};".format(bill_no))
+    cur.execute(sql)
+    records = cur.fetchall()
+    n = cur.rowcount
+    clear()
+    print("Bill No :", bill_no)
+    print('-' * 100)
+    if n <= 0:
+        print('Bill number {} does not exists'.format(bill_no))
+    else:
+        print('Customer Name : {}  Phone No :{}'.format(records[0][1], records[0][2]))
+        print('Bill Date : {}'.format(records[0][3]))
+        print('-' * 100)
+        print('{:10s} {:30s} {:20s} {:10s} {:30s}'.format('ID', 'Item Name','Qty', 'Price', 'Amount'))
+        print('-' * 100)
+        for row in records:
+            print('{:<10d} {:30s} {:<20d} {:.2f} {:>.2f}'.format(row[4], row[6], row[5], row[7], row[5] * row[7]))
+        print('-' * 100)
+    print('\nPress any key to continue....')
+    a = input()
+
+def search_menu():
+    while True:
+        clear()
+        print('      S E A R C H    M E N U ')
+        print('^' * 100)
+        print('1.   Item Name')
+        print('2.   Customer information')
+        print('3.   Bill information')
+        print('4.   Back to main Menu')
+        choice = int(input('\n\nEnter your choice (1..4): '))
+        if choice == 1:
+            search_item()
+        if choice == 2:
+            search_customer()
+        if choice == 3:
+            search_bill()
+        if choice == 4:
+            break
+
+
+def main_menu():
+    while True:
+        clear()
+        print('      M A I N   M E N U')
+        print('-' * 100)
+        print('1.   Add New Item')
+        print('2.   Billing')
+        print('3.   Search Menu')
+        print('4    Exit')
+        choice = int(input('\n\nEnter your choice (1..6): '))
+        if choice == 1:
+            add_item()
+        if choice == 2:
+            billing()
+        if choice == 3:
+            search_menu()
+        if choice == 4:
+            break
+
+
+if __name__ == "__main__":
+    clear()
+    main_menu()
+#########################################################################
+import random
+import curses
+
+s= curses.initscr()
+curses.surs_set(0)
+sh,sw=s.getmaxyx()
+w=curses.newwin(sh,sw,0,0)
+w.keypad(1)
+w.timeout(100)
+
+snk_x=sw/4
+snk_y=sh/2
+snake=[
+    [snk_y,snk_x],
+    [snk_y,snk_x-1],
+    [snk_y,snk_x-2]
+]
+
+food=[sh/2,sw/2]
+w.addch(food[0],food[1], curses.APC_PI)
+
+key=curses.KEY_RIGHT
+while True:
+    next_key=w.getch()
+    key=key if next_key==-1 else next_key
+
+    if sanke[0][0] in [0,sh] or snake[0][1] in [0,sw] or snake[0] in snake[1:]:
+        curses.endwin()
+        quit()
+    new_head =[snake[0][0], snake[0][1]]
+
+    if key==curses.KEY_DOWN:
+        new_head[0]+=1
+    if key==curses.KEY_UP:
+        new_head[0]-=1
+    if key==curses.KEY_LEFT:
+        new_head[0]-=1
+    if key==curses.KEY_RIGHT:
+        new_head[0]+=1
+
+    snake.insert(0,new_head)
+
+    if snake[0] == food:
+        food=none
+        while food is None:
+            nf=[
+                random.randint(1,sh-1),
+                random.randint(1,sh-1)
+            ]
+            food=nf if nf not in snake else None
+        w.addch(food[0],food[1],curse.ACS_PI
+    else:
+        tail=snake.pop()
+        w.addch(tail[0],tail[1],' ')
+    w.addch(snake[0][0], snake[0][1], curses.ACS_CKBOARD)
+
+#########################################################################
+a={9878798672:"Mohan",9376564738:"Mosh",9878645323:"Johnson",98746573645:"Olsens",9878767656:"Holland",9878787676:"Hiddlesten",9878764565:"Hemsworth",9876765454:"Jackyie",9878767656:"Aidens",9878765654:"sandyis"}
+a.items()
+for len(a.value())>5:
+    print(value)
+#######################################################################
+
+n=int(input("enter: "))
+
+i=-5
+c=15
+while (i > n):
+    if i < 0:
+        print(i)
+        i = i+c
+        c = c + 10
+        continue
+    elif i > 0:
+        print(i)
+        i = i - c
+        c = c + 10
+        continue
+#####################################################################
+import random
+import datetime
+
+# Global List Declaration
+name = []
+phno = []
+add = []
+checkin = []
+checkout = []
+room = []
+price = []
+rc = []
+p = []
+roomno = []
+custid = []
+day = []
+
+# Global Variable Declaration
+
+i = 0
+
+# Home Function
+def Home():
+
+	print("\t\t\t\t\t\t WELCOME TO HOTEL ANCASA\n")
+	print("\t\t\t 1 Booking\n")
+	print("\t\t\t 2 Rooms Info\n")
+	print("\t\t\t 3 Room Service(Menu Card)\n")
+	print("\t\t\t 4 Payment\n")
+	print("\t\t\t 5 Record\n")
+	print("\t\t\t 0 Exit\n")
+
+	ch=int(input("->"))
+
+	if ch == 1:
+		print(" ")
+		Booking()
+
+	elif ch == 2:
+		print(" ")
+		Rooms_Info()
+
+	elif ch == 3:
+		print(" ")
+		restaurant()
+
+	elif ch == 4:
+		print(" ")
+		Payment()
+
+	elif ch == 5:
+		print(" ")
+		Record()
+
+	else:
+		exit()
+
+# Function used in booking
+
+def date(c):
+
+	if c[2] >= 2019 and c[2] <= 2020:
+
+		if c[1] != 0 and c[1] <= 12:
+
+			if c[1] == 2 and c[0] != 0 and c[0] <= 31:
+
+				if c[2]%4 == 0 and c[0] <= 29:
+					pass
+
+				elif c[0]<29:
+					pass
+
+				else:
+					print("Invalid date\n")
+					name.pop(i)
+					phno.pop(i)
+					add.pop(i)
+					checkin.pop(i)
+					checkout.pop(i)
+					Booking()
+
+
+			# if month is odd & less than equal
+			# to 7th month
+			elif c[1] <= 7 and c[1]%2 != 0 and c[0] <= 31:
+				pass
+
+			# if month is even & less than equal to 7th
+			# month and not 2nd month
+			elif c[1] <= 7 and c[1]%2 == 0 and c[0] <= 30 and c[1] != 2:
+				pass
+
+			# if month is even & greater than equal
+			# to 8th month
+			elif c[1] >= 8 and c[1]%2 == 0 and c[0] <= 31:
+				pass
+
+			# if month is odd & greater than equal
+			# to 8th month
+			elif c[1]>=8 and c[1]%2!=0 and c[0]<=30:
+				pass
+
+			else:
+				print("Invalid date\n")
+				name.pop(i)
+				phno.pop(i)
+				add.pop(i)
+				checkin.pop(i)
+				checkout.pop(i)
+				Booking()
+
+		else:
+			print("Invalid date\n")
+			name.pop(i)
+			phno.pop(i)
+			add.pop(i)
+			checkin.pop(i)
+			checkout.pop(i)
+			Booking()
+
+	else:
+		print("Invalid date\n")
+		name.pop(i)
+		phno.pop(i)
+		add.pop(i)
+		checkin.pop(i)
+		checkout.pop(i)
+		Booking()
+
+
+# Booking function
+def Booking():
+
+		# used global keyword to
+		# use global variable 'i'
+		global i
+		print(" BOOKING ROOMS")
+		print(" ")
+
+		while 1:
+			n = str(input("Name: "))
+			p1 = str(input("Phone No.: "))
+			a = str(input("Address: "))
+
+			# checks if any field is not empty
+			if n!="" and p1!="" and a!="":
+				name.append(n)
+				add.append(a)
+				break
+
+			else:
+				print("\tName, Phone no. & Address cannot be empty..!!")
+
+		cii=str(input("Check-In: "))
+		checkin.append(cii)
+		cii=cii.split('/')
+		ci=cii
+		ci[0]=int(ci[0])
+		ci[1]=int(ci[1])
+		ci[2]=int(ci[2])
+		date(ci)
+
+		coo=str(input("Check-Out: "))
+		checkout.append(coo)
+		coo=coo.split('/')
+		co=coo
+		co[0]=int(co[0])
+		co[1]=int(co[1])
+		co[2]=int(co[2])
+
+		# checks if check-out date falls after
+		# check-in date
+		if co[1]<ci[1] and co[2]<ci[2]:
+
+			print("\n\tErr..!!\n\tCheck-Out date must fall after Check-In\n")
+			name.pop(i)
+			add.pop(i)
+			checkin.pop(i)
+			checkout.pop(i)
+			Booking()
+		elif co[1]==ci[1] and co[2]>=ci[2] and co[0]<=ci[0]:
+
+			print("\n\tErr..!!\n\tCheck-Out date must fall after Check-In\n")
+			name.pop(i)
+			add.pop(i)
+			checkin.pop(i)
+			checkout.pop(i)
+			Booking()
+		else:
+			pass
+
+		date(co)
+		d1 = datetime.datetime(ci[2],ci[1],ci[0])
+		d2 = datetime.datetime(co[2],co[1],co[0])
+		d = (d2-d1).days
+		day.append(d)
+
+		print("----SELECT ROOM TYPE----")
+		print(" 1. Standard Non-AC")
+		print(" 2. Standard AC")
+		print(" 3. 3-Bed Non-AC")
+		print(" 4. 3-Bed AC")
+		print(("\t\tPress 0 for Room Prices"))
+
+		ch=int(input("->"))
+
+		# if-conditions to display alloted room
+		# type and it's price
+		if ch==0:
+			print(" 1. Standard Non-AC - Rs. 3500")
+			print(" 2. Standard AC - Rs. 4000")
+			print(" 3. 3-Bed Non-AC - Rs. 4500")
+			print(" 4. 3-Bed AC - Rs. 5000")
+			ch=int(input("->"))
+		if ch==1:
+			room.append('Standard Non-AC')
+			print("Room Type- Standard Non-AC")
+			price.append(3500)
+			print("Price- 3500")
+		elif ch==2:
+			room.append('Standard AC')
+			print("Room Type- Standard AC")
+			price.append(4000)
+			print("Price- 4000")
+		elif ch==3:
+			room.append('3-Bed Non-AC')
+			print("Room Type- 3-Bed Non-AC")
+			price.append(4500)
+			print("Price- 4500")
+		elif ch==4:
+			room.append('3-Bed AC')
+			print("Room Type- 3-Bed AC")
+			price.append(5000)
+			print("Price- 5000")
+		else:
+			print(" Wrong choice..!!")
+
+
+		# randomly generating room no. and customer
+		# id for customer
+		rn = random.randrange(40)+300
+		cid = random.randrange(40)+10
+
+
+		# checks if alloted room no. & customer
+		# id already not alloted
+		while rn in roomno or cid in custid:
+			rn = random.randrange(60)+300
+			cid = random.randrange(60)+10
+
+		rc.append(0)
+		p.append(0)
+
+		if p1 not in phno:
+			phno.append(p1)
+		elif p1 in phno:
+			for n in range(0,i):
+				if p1== phno[n]:
+					if p[n]==1:
+						phno.append(p1)
+		elif p1 in phno:
+			for n in range(0,i):
+				if p1== phno[n]:
+					if p[n]==0:
+						print("\tPhone no. already exists and payment yet not done..!!")
+						name.pop(i)
+						add.pop(i)
+						checkin.pop(i)
+						checkout.pop(i)
+						Booking()
+		print("")
+		print("\t\t\t***ROOM BOOKED SUCCESSFULLY***\n")
+		print("Room No. - ",rn)
+		print("Customer Id - ",cid)
+		roomno.append(rn)
+		custid.append(cid)
+		i=i+1
+		n=int(input("0-BACK\n ->"))
+		if n==0:
+			Home()
+		else:
+			exit()
+
+# ROOMS INFO
+def Rooms_Info():
+	print("		 ------ HOTEL ROOMS INFO ------")
+	print("")
+	print("STANDARD NON-AC")
+	print("---------------------------------------------------------------")
+	print("Room amenities include: 1 Double Bed, Television, Telephone,")
+	print("Double-Door Cupboard, 1 Coffee table with 2 sofa, Balcony and")
+	print("an attached washroom with hot/cold water.\n")
+	print("STANDARD NON-AC")
+	print("---------------------------------------------------------------")
+	print("Room amenities include: 1 Double Bed, Television, Telephone,")
+	print("Double-Door Cupboard, 1 Coffee table with 2 sofa, Balcony and")
+	print("an attached washroom with hot/cold water + Window/Split AC.\n")
+	print("3-Bed NON-AC")
+	print("---------------------------------------------------------------")
+	print("Room amenities include: 1 Double Bed + 1 Single Bed, Television,")
+	print("Telephone, a Triple-Door Cupboard, 1 Coffee table with 2 sofa, 1")
+	print("Side table, Balcony with an Accent table with 2 Chair and an")
+	print("attached washroom with hot/cold water.\n")
+	print("3-Bed AC")
+	print("---------------------------------------------------------------")
+	print("Room amenities include: 1 Double Bed + 1 Single Bed, Television,")
+	print("Telephone, a Triple-Door Cupboard, 1 Coffee table with 2 sofa, ")
+	print("1 Side table, Balcony with an Accent table with 2 Chair and an")
+	print("attached washroom with hot/cold water + Window/Split AC.\n\n")
+	print()
+	n=int(input("0-BACK\n ->"))
+	if n==0:
+		Home()
+	else:
+		exit()
+
+# RESTAURANT FUNCTION
+def restaurant():
+	ph=int(input("Customer Id: "))
+	global i
+	f=0
+	r=0
+	for n in range(0,i):
+		if custid[n]==ph and p[n]==0:
+			f=1
+			print("-------------------------------------------------------------------------")
+			print("						 Hotel AnCasa")
+			print("-------------------------------------------------------------------------")
+			print("						 Menu Card")
+			print("-------------------------------------------------------------------------")
+			print("\n BEVARAGES							 26 Dal Fry................ 140.00")
+			print("----------------------------------	 27 Dal Makhani............ 150.00")
+			print(" 1 Regular Tea............. 20.00	 28 Dal Tadka.............. 150.00")
+			print(" 2 Masala Tea.............. 25.00")
+			print(" 3 Coffee.................. 25.00	 ROTI")
+			print(" 4 Cold Drink.............. 25.00	 ----------------------------------")
+			print(" 5 Bread Butter............ 30.00	 29 Plain Roti.............. 15.00")
+			print(" 6 Bread Jam............... 30.00	 30 Butter Roti............. 15.00")
+			print(" 7 Veg. Sandwich........... 50.00	 31 Tandoori Roti........... 20.00")
+			print(" 8 Veg. Toast Sandwich..... 50.00	 32 Butter Naan............. 20.00")
+			print(" 9 Cheese Toast Sandwich... 70.00")
+			print(" 10 Grilled Sandwich........ 70.00	 RICE")
+			print("									 ----------------------------------")
+			print(" SOUPS								 33 Plain Rice.............. 90.00")
+			print("----------------------------------	 34 Jeera Rice.............. 90.00")
+			print(" 11 Tomato Soup............ 110.00	 35 Veg Pulao.............. 110.00")
+			print(" 12 Hot & Sour............. 110.00	 36 Peas Pulao............. 110.00")
+			print(" 13 Veg. Noodle Soup....... 110.00")
+			print(" 14 Sweet Corn............. 110.00	 SOUTH INDIAN")
+			print(" 15 Veg. Munchow........... 110.00	 ----------------------------------")
+			print("									 37 Plain Dosa............. 100.00")
+			print(" MAIN COURSE						 38 Onion Dosa............. 110.00")
+			print("----------------------------------	 39 Masala Dosa............ 130.00")
+			print(" 16 Shahi Paneer........... 110.00	 40 Paneer Dosa............ 130.00")
+			print(" 17 Kadai Paneer........... 110.00	 41 Rice Idli.............. 130.00")
+			print(" 18 Handi Paneer........... 120.00	 42 Sambhar Vada........... 140.00")
+			print(" 19 Palak Paneer........... 120.00")
+			print(" 20 Chilli Paneer.......... 140.00	 ICE CREAM")
+			print(" 21 Matar Mushroom......... 140.00	 ----------------------------------")
+			print(" 22 Mix Veg................ 140.00	 43 Vanilla................. 60.00")
+			print(" 23 Jeera Aloo............. 140.00	 44 Strawberry.............. 60.00")
+			print(" 24 Malai Kofta............ 140.00	 45 Pineapple............... 60.00")
+			print(" 25 Aloo Matar............. 140.00	 46 Butter Scotch........... 60.00")
+			print("Press 0 -to end ")
+			ch=1
+			while(ch!=0):
+
+				ch=int(input(" -> "))
+
+				# if-elif-conditions to assign item
+				# prices listed in menu card
+				if ch==1 or ch==31 or ch==32:
+					rs=20
+					r=r+rs
+				elif ch<=4 and ch>=2:
+					rs=25
+					r=r+rs
+				elif ch<=6 and ch>=5:
+					rs=30
+					r=r+rs
+				elif ch<=8 and ch>=7:
+					rs=50
+					r=r+rs
+				elif ch<=10 and ch>=9:
+					rs=70
+					r=r+rs
+				elif (ch<=17 and ch>=11) or ch==35 or ch==36 or ch==38:
+					rs=110
+					r=r+rs
+				elif ch<=19 and ch>=18:
+					rs=120
+					r=r+rs
+				elif (ch<=26 and ch>=20) or ch==42:
+					rs=140
+					r=r+rs
+				elif ch<=28 and ch>=27:
+					rs=150
+					r=r+rs
+				elif ch<=30 and ch>=29:
+					rs=15
+					r=r+rs
+				elif ch==33 or ch==34:
+					rs=90
+					r=r+rs
+				elif ch==37:
+					rs=100
+					r=r+rs
+				elif ch<=41 and ch>=39:
+					rs=130
+					r=r+rs
+				elif ch<=46 and ch>=43:
+					rs=60
+					r=r+rs
+				elif ch==0:
+					pass
+				else:
+					print("Wrong Choice..!!")
+			print("Total Bill: ",r)
+
+			# updates restaurant charges and then
+			# appends in 'rc' list
+			r=r+rc.pop(n)
+			rc.append(r)
+		else:
+			pass
+	if f == 0:
+		print("Invalid Customer Id")
+	n=int(input("0-BACK\n ->"))
+	if n==0:
+		Home()
+	else:
+		exit()
+
+
+# PAYMENT FUNCTION
+def Payment():
+
+	ph=str(input("Phone Number: "))
+	global i
+	f=0
+
+	for n in range(0,i):
+		if ph==phno[n] :
+
+			# checks if payment is
+			# not already done
+			if p[n]==0:
+				f=1
+				print(" Payment")
+				print(" --------------------------------")
+				print(" MODE OF PAYMENT")
+
+				print(" 1- Credit/Debit Card")
+				print(" 2- Paytm/PhonePe")
+				print(" 3- Using UPI")
+				print(" 4- Cash")
+				x=int(input("-> "))
+				print("\n Amount: ",(price[n]*day[n])+rc[n])
+				print("\n		 Pay For AnCasa")
+				print(" (y/n)")
+				ch=str(input("->"))
+
+				if ch=='y' or ch=='Y':
+					print("\n\n --------------------------------")
+					print("		 Hotel AnCasa")
+					print(" --------------------------------")
+					print("			 Bill")
+					print(" --------------------------------")
+					print(" Name: ",name[n],"\t\n Phone No.: ",phno[n],"\t\n Address: ",add[n],"\t")
+					print("\n Check-In: ",checkin[n],"\t\n Check-Out: ",checkout[n],"\t")
+					print("\n Room Type: ",room[n],"\t\n Room Charges: ",price[n]*day[n],"\t")
+					print(" Restaurant Charges: \t",rc[n])
+					print(" --------------------------------")
+					print("\n Total Amount: ",(price[n]*day[n])+rc[n],"\t")
+					print(" --------------------------------")
+					print("		 Thank You")
+					print("		 Visit Again :)")
+					print(" --------------------------------\n")
+					p.pop(n)
+					p.insert(n,1)
+
+					# pops room no. and customer id from list and
+					# later assigns zero at same position
+					roomno.pop(n)
+					custid.pop(n)
+					roomno.insert(n,0)
+					custid.insert(n,0)
+
+			else:
+
+				for j in range(n+1,i):
+					if ph==phno[j] :
+						if p[j]==0:
+							pass
+
+						else:
+							f=1
+							print("\n\tPayment has been Made :)\n\n")
+	if f==0:
+		print("Invalid Customer Id")
+
+	n = int(input("0-BACK\n ->"))
+	if n == 0:
+		Home()
+	else:
+		exit()
+
+# RECORD FUNCTION
+def Record():
+
+	# checks if any record exists or not
+	if phno!=[]:
+		print("	 *** HOTEL RECORD ***\n")
+		print("| Name	 | Phone No. | Address	 | Check-In | Check-Out	 | Room Type	 | Price	 |")
+		print("----------------------------------------------------------------------------------------------------------------------")
+
+		for n in range(0,i):
+			print("|",name[n],"\t |",phno[n],"\t|",add[n],"\t|",checkin[n],"\t|",checkout[n],"\t|",room[n],"\t|",price[n])
+
+		print("----------------------------------------------------------------------------------------------------------------------")
+
+	else:
+		print("No Records Found")
+	n = int(input("0-BACK\n ->"))
+	if n == 0:
+		Home()
+
+	else:
+		exit()
+
+# Driver Code
+Home()
+#################################################################################
+#q1 = """What is 2+2
+#A) 1
+#B) 3"""
+#q2 = """what is the value of sin90+cos0
+#A)0
+#B)2"""
+#q3 = """What do you mean by CME's?
+#A) Clean My Egg
+#B) Coronal Mass Ejections"""
+#q4 = """Is the Earth flat?
+#A) True
+#B) False"""
+#q5 = """Why did Humpty dumpty sat on the wall
+#A) He was tired
+#B) He wanted to"""
+
+
+
+"""questions = {q1:"B" ,q2:"B" ,q3:"B" ,q4:"B" ,q5:"B"}
+
+name = input("Enter your name: ")
+print("hello",name,"welcome to the quiz")
+score=0
+for i in questions:
+    print(i)
+    ans = input("enter the answer (a/b):")
+    if ans==questions[i]:
+        print("you got 1 point")
+        score = score+1
+    else:
+        print("you lost 1 point")
+        score=score-1
+print("final score is:",score)"""
+
+import random
+Questions={}
+Name = input(str("Enter Name: "))
+score = 0
+print("Hello", Name, ", Welcome to QuizHub")
+for i in range(1,6):
+    print()
+    b=input(str("Enter your question=> "))
+    c=input(str(" Enter Wrong Option=> "))
+    d=input(str("Enter Correct Option=> "))
+    Questions.update({i:{b:[c,d]}})
+x=0
+while x<=6:
+    print("Here's your question")
+    print()
+    y=[i]
+    print("Now ans the question and here are its options")
+    print(Questions[i])
+    e=input("Answer the correct option: ")
+    if e==c:
+        print("correct")
+        score += 1
+        x+=1
+        del Questions[i]
+        y.remove(i)
+    else:
+        print("Sorry that's the wrong one")
+        break
+print("final score= ",score)
+#############################################################################
+import random
+
+while True:
+    user_action = input("Enter a choice (rock, paper, scissors): ")
+    possible_actions = ["rock", "paper", "scissors"]
+    computer_action = random.choice(possible_actions)
+    print(f"\nYou chose {user_action}, computer chose {computer_action}.\n")
+
+    if user_action == computer_action:
+        print(f"Both players selected {user_action}. It's a tie!")
+    elif user_action == "rock":
+        if computer_action == "scissors":
+            print("Rock smashes scissors! You win!")
+        else:
+            print("Paper covers rock! You lose.")
+    elif user_action == "paper":
+        if computer_action == "rock":
+            print("Paper covers rock! You win!")
+        else:
+            print("Scissors cuts paper! You lose.")
+    elif user_action == "scissors":
+        if computer_action == "paper":
+            print("Scissors cuts paper! You win!")
+        else:
+            print("Rock smashes scissors! You lose.")
+
+    play_again = input("Play again? (y/n): ")
+    if play_again.lower() != "y":
+        break
+######################################################################
+d={"Tanvi":76000,"Mehul":90000,"Anil":56000,"Manvi":43000,"Joe":9000}
+a=[]
+def push(name):
+    a.append(name)
+def pop():
+    if a==[]:
+        return None
+    else:
+        return a.pop()
+for key in d:
+    if d[key]>45000:
+        push(key)
+while True:
+    na=pop()
+    if na!=None:
+        print(na,end='\t')
+    else:
+        break
+################################################################
+import pygame
+import math
+pygame.init()
+
+width, height = 900, 900
+win=pygame.display.set_mode((width, height))
+pygame.display.set_caption("Plant Simulation")
+
+def main():
+    run=True
+    while run:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                run = False
+    pygame.quit()
+main()
+#####################################################
+import numpy as np
+from scipy.signal import convolve2d
+import matplotlib.pyplot as plt
+from matplotlib import animation
+
+# Width, height of the image.
+nx, ny = 600, 450
+# Reaction parameters.
+alpha, beta, gamma = 1, 1, 1
+
+def update(p,arr):
+    """Update arr[p] to arr[q] by evolving in time."""
+
+    # Count the average amount of each species in the 9 cells around each cell
+    # by convolution with the 3x3 array m.
+    q = (p+1) % 2
+    s = np.zeros((3, ny,nx))
+    m = np.ones((3,3)) / 9
+    for k in range(3):
+        s[k] = convolve2d(arr[p,k], m, mode='same', boundary='wrap')
+    # Apply the reaction equations
+    arr[q,0] = s[0] + s[0]*(alpha*s[1] - gamma*s[2])
+    arr[q,1] = s[1] + s[1]*(beta*s[2] - alpha*s[0])
+    arr[q,2] = s[2] + s[2]*(gamma*s[0] - beta*s[1])
+    # Ensure the species concentrations are kept within [0,1].
+    np.clip(arr[q], 0, 1, arr[q])
+    return arr
+
+# Initialize the array with random amounts of A, B and C.
+arr = np.random.random(size=(2, 3, ny, nx))
+
+# Set up the image
+fig, ax = plt.subplots()
+im = ax.imshow(arr[0,0], cmap=plt.cm.winter)
+ax.axis('off')
+
+def animate(i, arr):
+    """Update the image for iteration i of the Matplotlib animation."""
+
+    arr = update(i % 2, arr)
+    im.set_array(arr[i % 2, 0])
+    return [im]
+
+anim = animation.FuncAnimation(fig, animate, frames=200, interval=5,
+                               blit=False, fargs=(arr,))
+
+# To view the animation, uncomment this line
+plt.show()
+
+# To save the animation as an MP4 movie, uncomment this line
+#anim.save(filename='bz.mp4', fps=30)
+###########################################################################
+a=[]
+def push():
+    while True:
+        val=int(input("Enter value to be pushed: "))
+        a.append(val)
+        ch=input("Enter more? (Y/N): ")
+        if ch.lower()=="n":
+            break
+    print("Element(s) entered successfully")
+    display()
+def pop():
+    if a==[]:
+        print("Underflow")
+    else:
+        z=a.pop()
+        print("Deleted item successfully: ",z)
+        display()
+def peek():
+    if a==[]:
+        print("Underflow")
+    else:
+        i=len(a)-1
+        print("Required element: ",a[i])
+def display():
+    if a==[]:
+        print("Underflow")
+    else:
+        for i in range(len(a)-1,-1,-1):
+            print(a[i])
+while True:
+    print("Menu\n1->Push\n2->Pop\n3->Peek\n4->Display\n5->Exit")
+    c=int(input("Enter your choice: "))
+    if c==1:
+        push()
+    elif c==2:
+        pop()
+    elif c==3:
+        peek()
+    elif c==4:
+        display()
+    else:
+        break
+#################################################################
+a=[]
+def push():
+    while True:
+        val=int(input("Enter element to be entered: "))
+        a.append(val)
+        ch=input("Enter more? (y/n): ")
+        if ch.lower()=="n":
+            break
+    print("Element entered successfully")
+    display()
+def pop():
+    if a==[]:
+        print("Underflow")
+    else:
+        z=a.pop()
+        print("Deleted element: ",z)
+        display()
+def peek():
+    if a==[]:
+        print("Underflow")
+    else:
+        i=len(a)-1
+        print("Element is: ",a[i])
+def display():
+    if a==[]:
+        print("Underflow")
+    else:
+        for i in range(len(a)-1,-1,-1):
+            print(a[i])
+while True:
+    print("Menu\n1->Push\n2->Pop\n3->Peek\n4->Display\n5->Exit")
+    c=int(input("Enter choice: "))
+    if c==1:
+        push()
+    elif c==2:
+        pop()
+    elif c==3:
+        peek()
+    elif c==4:
+        display()
+    else:
+        break
+####################################################
+def cube_sum (n):
+    sumc = 0
+    nstr = str(n)
+    for i in range(len(nstr), 0, -1):
+        sumc = sumc + int(nstr[-i]) ** 3
+    return sumc == n
+lst =[]
+while True:
+    x=int(input("Enter number: "))
+    lst.append(x)
+    ch=input("wanna continue?:  ")
+    if ch.lower()=="no":
+        break
+pass_lst = [i for i in lst if cube_sum(i)]
+if pass_lst:
+    print('List of qualified numbers:', pass_lst)
+    print('Max:', max(pass_lst))
+    print('Min:', min(pass_lst))
+else:
+    print('No number in the list is qualified')
+#################################################################
+f = open("sample1.txt","r")
+str=f.readlines()
+for i in str:
+    s=i.split()
+    for j in s:
+        print(j,"#",end="")
+f.close()
+######################################
+f=open("text.txt","r")
+f1=open("text1.txt","w")
+l=f.readlines()
+for i in l:
+    if 'a' not in i:
+        f1.write(i)
+print("All the lines with 'a' have been separated from the source file and copied to the second file")
+f1.close()
+f.close()
+###########################
+print("1: Checking perfect no \n2: Checking Armstrong no \n3: Checking Palindrome")
+ch=int(input("Enter choice: "))
+if ch==1:
+    n=int(input("Enter a number: "))
+    sum=0
+    for i in range(1,n):
+        if n%i==0:
+            sum=sum+1
+    if sum==n:
+        print(n,"is a perfect no")
+    else:
+        print(n,"is not a perfect no")
+elif ch==2:
+    n=int(input("Enter a number: "))
+    m=n
+    t=0
+    while n>0:
+        r=n%10
+        n=n//10
+        t=t+(r**3)
+    if m==t:
+        print("Armstrong number")
+    else:
+        print("Not Armstrong number")
+elif ch==3:
+    n=int(input("Enter a number: "))
+    m=n
+    t=0
+    while n>0:
+        r=n%10
+        n=n//10
+        t=(t*10)+r
+    if m==t:
+        print("Palindrome")
+    else:
+        print("Not a Palindrome")
+else:
+    print("Invalid choice")
+
+#######################################
+with open("sample1.txt","r") as f:
+    d={}
+    x=f.read()
+    word=x.split()
+    for i in word:
+        if i in d.keys():
+            d[i]+=1
+        else:
+            d[i]=1
+    m=max(d.values())
+    for i in d:
+        if d[i]==m:
+            print(i,":",d[i])
+############################
+import csv
+with open("csvform.csv", "w") as f:
+    f = csv.writer(f)
+    f.writerow(["User Id", "password"])
+    while True:
+        user_id = input("enter id: ")
+        password = input("enter password: ")
+        record = [user_id, password]
+        f.writerow(record)
+        x = input("Want to Enter again(y/n): ")
+        if x=="y":
+            continue
+        else:
+            break
+with open("csvform.csv", "r") as f2:
+    f2 = csv.reader(f2)
+    given = input("Enter the user id to be searched: ")
+    for i in f2:
+        next(f2)
+        if i[0] == given:
+            print(i[1])
+            break
+##########################################
+n=int(input("Enter no. of elements: "))
+l=[]
+for i in range(n):
+    a=int(input("Enter a number: "))
+    l.append(a)
+print("Given list: ",l)
+for i in range(1,n,2):
+    l[i],l[i-1]=l[i-1],l[i]
+print("List after swapping: ",l)
+########################################
+n=int(input("Enter number of student records: "))
+d={}
+for i in range(1,n+1):
+    b=str(i)
+    print("\nPlease enter Record"+b+"\n")
+    r=int(input("Enter roll no: "))
+    n=input("Enter name: ")
+    m=int(input("Enter marks in maths: "))
+    p=int(input("Enter marks in physics: "))
+    c=int(input("Enter marks in chemistry: "))
+    cs=int(input("Enter marks in cs: "))
+    e=int(input("Enter marks in english: "))
+    t=m+p+c+cs+e
+    per=(t/500)*100
+    d[r]=(n,per)
+    if per>75:
+        print(d[r])
+        print("Pass")
+    else:
+        print("\nMarks less than 75\n")
+#####################################
+f=open("sample1.txt","r")
+str=f.read()
+a=0
+b=0
+c=0
+d=0
+for i in str:
+    if (i.isupper()):
+        c=c+1
+    elif (i.islower()):
+        d=d+1
+    i=i.lower()
+    if i in "aeiouAEIOU":
+        a=a+1
+    elif i in "bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ":
+        b=b+1
+    else:
+        pass
+print("no of vowels: ",a)
+print("no of consonants: ",b)
+print("no of uppercase: ",c)
+print("no of lowercase: ",d)
+f.close()
+######################################
+d={"What engne is 2Jz from":"2",
+   "After who McLarren SENNA is name after":"1",
+   """What does "box box box" mean in Formula One""":"1",
+   """Who said " Areodynamics are for people who can't build engiines""":"2",
+   "Who won the 2013 Indian Grand Prix":"2",
+   "Whch one is the fastest":"2"}
+l=[["1:Civic Type-R","2:Mk-3 Supra","3:BMW M3","4:Lanevo"],
+   ["1:Ayrton Senna","2:Max Senna","3:Lewis Hamilton","4:Michael Senna"],
+   ["1:Need to pit stop","2:Need Compound tyres","3:Electrical problem in car","4:Mechanical Problem in car"],
+   ["1:Smokey Nagata","2:Enzo Ferrari","3:Horacio Pagani","4:Ferruccio Lamborghini"],
+   ["1:Lewis Hamilton","2:Sebastian Vettel","3:Lando Norris","4:Sergio Perez"],
+   ["1:Devil 16","2:Koeigsegg Jesko","3:Lykan hypersport","4:Bugatti Chiron Pur Sports"]]
+
+def new_game():
+    g= []
+    c_g = 0
+    x = 1
+    for key in d:
+        y=random.choice(l1)
+        print("-------------------------")
+        print(key)
+        for i in l[x-1]:
+            print(i)
+        a = input("Enter (1,2,3 or 4): ")
+        a = a.upper()
+        g.append(a)
+        c_g += check_answer(d.get(key), a)
+        x += 1
+    display_score(c_g, a)
+def check_answer(answer, a):
+    if answer == a:
+        print("CORRECT!")
+        return 1
+    else:
+        print("WRONG!")
+        return 0
+def display_score(c_g, g):
+    print("-------------------------")
+    print("RESULTS")
+    print("-------------------------")
+    score = int((c_g/len(d))*100)
+    print("Your score is: "+str(score)+"%")
+new_game()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"""s=0
+l1=[1,2,3,4,5,6]
+while len(l1)>0:
+    x=random.choice(l1)
+    print("Random number between 1 and 6: ",x)
+    print(a[x][0])
+    print(a[x][1])
+    print(a[x][2])
+    print(a[x][3])
+    print(a[x][4])
+    y=int(input("choose correct option: "))
+    if y==a[x][5]:
+        l1.remove(x)
+        s+=1
+        continue
+    else:
+        l1.remove(x)
+        s+=0
+        continue
+    print("your score is: ",s)"""
+
+
+####################################################
+import pickle
+f=open("records.dat","wb")
+pickle.dump([1,"Sneha",90],f)
+pickle.dump([2,"Henry",80],f)
+pickle.dump([3,"Mehul",90],f)
+pickle.dump([4,"Sam",70],f)
+pickle.dump([5,"Bryan",85],f)
+pickle.dump([6,"Samairha",80],f)
+f.close()
+##############################################
+import mysql.connector as cn
+db=cn.connect(host="localhost", user="root",password="")
+cur=db.cursor()
+cur.execute("drop database Reg")
+cur.execute("create database reg")
+cur.execute("use reg")
+cur.execute("create table registration_info(name varchar(30), userid varchar(30),pwd varchar(50),phoneno bigint);")
+def registration():
+    x=int(input("Enter no. of records u want to enter: "))
+    for i in range(x):
+        n=input("Eter name: ")
+        ud=input("Enter userid: ")
+        p=input("Enter password")
+        pn=int(input("Enter phone no.: "))
+        cur.execute("insert into registration_info(name ,userid ,pwd ,phoneno) values('{}','{}','{}',{})".format(n,ud,p,pn))
+        db.commit()
+        print("Details inserted")
+        print()
+def login():
+    x=input("Enter userid: ")
+    y=input("Enter password: ")
+    cur.execute("select * from registration_info")
+    recs=cur.fetchall()
+    for i in recs:
+        if i[1]==x and i[2]==y:
+            print("Hello",i[0])
+            print("Welcome!!, we are greatfull to serve you")
+        else:
+            print("Oops!!, sorry",i[0])
+            print("You are not registered. please do register first")
+print("1: Registration\n2: Login\n3: Exit")
+print()
+while True:
+    ch=int(input("Enter Choice: "))
+    if ch==1:
+        registration()
+    elif ch==2:
+        login()
+    elif ch==3:
+        break
+    else:
+        print("Invalid choice")
+###########################################
+n=int(input("Enter number of element: "))
+t=()
+for i in range(n):
+    s=int(input("Enter elements: "))
+    t=t+(s,)
+print("tuple is: ",t)
+search=int(input("Enter element to search for: "))
+if search in t:
+    print("Exists in the tuple")
+else:
+    print("Doesn't exist in the tuple")
+#####################################
+a=[]
+def push(a,val):
+    a.append(val)
+    print("Element pushed succesfully")
+def pop_item(a):
+    val=a.pop()
+    print(val)
+def peek(a):
+    index=len(a)-1
+    print("Peek element: ",a[index])
+def display(a):
+    for i in range(len(a)-1,-1,-1):
+        print(a[i])
+while True:
+    print("1->Push \n2->Pop \n3->Peek \n4->Display \n5->Exit")
+    ch=int(input("Choose option: "))
+    if ch==1:
+        val=int(input("Enter number to push: "))
+        push(a,val)
+    elif ch==2:
+        if len(a)==0:
+            print("Empty stack")
+        else:
+            pop_item(a)
+    elif ch==3:
+        if len(a)==0:
+            print("Empty stack")
+        else:
+            peek(a)
+    elif ch==4:
+        if len(a)==0:
+            print("Empty stack")
+        else:
+            display(a)
+    else:
+        break
+######################################
+stk=[]
+def push():
+    while True:
+        x=input("Enter name: ")
+        stk.append(x)
+        display()
+        ch=input("Enter more ? :  ")
+        if ch=="no":
+            break
+def pop():
+    if stk==[]:
+        print("Underflow")
+    else:
+        z=stk.pop()
+        print("deleted element: ",z)
+        display()
+def display():
+    a=len(stk-1)
+    for i in range(a-1,-1,-1):
+                   print(stk[i])
+while True:
+    print("1.Add\n2.Delete \n3.Display \n4.Exit \n")
+    c=int(input("Enter choice(1-4): "))
+    if c==1:
+        push()
+    elif c==2:
+        pop()
+    elif c==3:
+        display()
+    else:
+        break
+###############################################
+x=str(input("Enter string:"))
+while True:
+    print("what do you wanna do?")
+    print("1. Check palindrome")
+    print("2. Swap case of string")
+    print("3. Exit")
+    n=int(input("choose:"))
+    if n==1:
+        def ispalin(str):
+            for i in range(0, int(len(str)/2)):
+                if str[i] != str[len(str)-i-1]:
+                    return False
+            return True
+        y=ispalin(x)
+        if (y):
+            print(x,"is a palindrome")
+        else:
+            print(x,"is not a palindrome")
+    elif n==2:
+        print(x.swapcase())
+
+    else:
+        break
+#######################################################
+s=int(input("Enter no of elements: "))
+t=()
+for i in range(s):
+    n=int(input("Enter number: "))
+    t=t+(n,)
+print("Largest number in tuple: ",max(t))
+print("Smallest number in tuple: ",min(t))
+###############################################
