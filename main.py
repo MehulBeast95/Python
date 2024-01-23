@@ -19,7 +19,6 @@ def pop():
         print("deleted element: ", z)
         display()
 
-
 def display():
     a = len(stk - 1)
     for i in range(a - 1, -1, -1):
