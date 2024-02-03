@@ -43,4 +43,19 @@ while True:
     if l[0]+l[1]==tar:
         print()"""
 #sawp first and last element in the list
-l1=[]
+"""l1=[2,3,4,5,6,7,8,9]
+print(l1)
+a=l1[0]
+b=l1[-1]
+l1[0]=b
+l1[-1]=a
+print(l1)"""
+#wap to remove duplicates and sort them in ascending order
+l1=[5,2,2,2,3,4,3,5,4,2,3,6,7,5,6,7]
+a=[]
+for i in l1:
+    if i not in a:
+        a.append(i)
+        a.sort()
+print(l1)
+print(a)
