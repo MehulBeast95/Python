@@ -1,3 +1,4 @@
+#WAP to create a list of prime no from 1 to 100
 l1 = []
 for i in range(2, 100):
     a = True
