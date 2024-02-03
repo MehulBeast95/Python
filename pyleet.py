@@ -30,7 +30,7 @@ one
 valid
 answer
 exists."""
-l=[]
+"""l=[]
 while True:
     a=int(input("Enter element for list: "))
     l.append(a)
@@ -41,4 +41,6 @@ while True:
 tar=int(input("Target: "))
 while True:
     if l[0]+l[1]==tar:
-        print()
+        print()"""
+#sawp first and last element in the list
+l1=[]
