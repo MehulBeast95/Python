@@ -26,15 +26,15 @@ Constraints:
 -109 <= nums[i] <= 109
 -109 <= target <= 109
 Only one valid answer exists."""
-l=[]
+l1=[]
 while True:
     a=int(input("Enter element for list: "))
-    l.append(a)
+    l1.append(a)
     b=input("Want to add more ?(y/n): ")
     if b.lower()=="n":
         print(l)
         break
 tar=int(input("Target: "))
 while True:
-    if l[0]+l[1]==tar:
+    if l1[0]+l1[1]==tar:
         print()
