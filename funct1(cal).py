@@ -21,9 +21,9 @@ def multiply(x, y):
 
 while True:
     print("1)ADD \n2)SUBTRACT \n3)DIVIDE \n4)MULTIPLY \n5)EXIT")
+    a = int(input("Enter choice: "))
     x = int(input("Enter x: "))
     y = int(input("Enter y:"))
-    a = int(input("Enter choice: "))
     if a == 1:
         add(x, y)
     elif a == 2:
