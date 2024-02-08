@@ -21,6 +21,70 @@ elif c == 3:
     else:
         print("Incorrect Password")
 ##################################################################
+#emoji converter
+#message=input(enter)
+def emoji_converter(message):
+    words = message.split(' ') #converts input message into list of words
+#create an emoji dictionery use windows logo key + dot(.) to add emojis
+    emojis = {
+        ":)" : "😄" ,
+        ":(" : " 😥"
+        }
+    output =''
+    for word in words:
+        output+=emojis.get(word,word)+" "
+    print(output)
+
+message=input('enter the message')
+emoji_converter(message)
+##################################################################
+# wap to write a function that does the arithmetic operation
+def add(x, y):
+    z = x + y
+    print(z)
+
+
+def subtract(x, y):
+    z = x - y
+    print(z)
+
+
+def divide(x, y):
+    z = x / y
+    print(z)
+
+
+def multiply(x, y):
+    z = x * y
+    print(z)
+
+
+while True:
+    print("1)ADD \n2)SUBTRACT \n3)DIVIDE \n4)MULTIPLY \n5)EXIT")
+    a = int(input("Enter choice: "))
+    x = int(input("Enter x: "))
+    y = int(input("Enter y:"))
+    if a == 1:
+        add(x, y)
+    elif a == 2:
+        subtract(x, y)
+    elif a == 3:
+        divide(x, y)
+    elif a == 4:
+        multiply(x, y)
+    elif a == 5:
+        break
+##################################################################
+#wap to calculate the character frequency
+a=input("Enter word: ")
+l = {}
+for i in a:
+    if i in l:
+        l[i] += 1
+    else:
+        l[i] = 1
+print("frequency of character in ",a ,"is : "+ str(l))
+#################################################################
 
 while c == 'yes':
         if c == 'no':

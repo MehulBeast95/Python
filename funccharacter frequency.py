@@ -1,9 +1,8 @@
 #wap to calculate the character frequency
+def freq(a):
+    d={}
+    for keys in a.lower():
+        d[keys] = d.get(keys, 0) + 1
+    print("Count of all characters in ",a," is : \n"+ str(d))
 a=input("Enter word: ")
-l = {}
-for i in a:
-    if i in l:
-        l[i] += 1
-    else:
-        l[i] = 1
-print("frequency of character in ",a ,"is : "+ str(l))
+freq(a)
